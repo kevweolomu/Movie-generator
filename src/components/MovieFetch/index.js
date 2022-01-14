@@ -16,6 +16,10 @@ export const MovieFetch = ({movieTitle}) => {
             const response = await fetch(`https://www.omdbapi.com/?apikey=3b2a6fcc&t=${movieTitle}`)
             const data = await response.json();
             // setDataMovie(data);
+            if (data.Response === 'False') {
+                console.log(`Movie not found`)
+            }; 
+            //console.log(typeof(data.Response))
             setImage(data.Poster);
             setRating (data.imdbRating);
             setActors (data.Actors);
@@ -25,6 +29,8 @@ export const MovieFetch = ({movieTitle}) => {
         };
         getData();
     }, [movieTitle])
+
+
 
     return (
         <div className="movies">
