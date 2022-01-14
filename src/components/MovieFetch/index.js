@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 export const MovieFetch = ({movieTitle}) => {
     //const [dataMovie, setDataMovie] = useState();
-    //const [title, setTitle]= useState();
+    //const [title, setTitle]= useState("");
     const [image, setImage]= useState("");
     const [rating, setRating] = useState("");
     const [actors, setActors] = useState ("");
@@ -16,6 +16,10 @@ export const MovieFetch = ({movieTitle}) => {
             const response = await fetch(`https://www.omdbapi.com/?apikey=3b2a6fcc&t=${movieTitle}`)
             const data = await response.json();
             // setDataMovie(data);
+            if (data.Response === 'False') {
+                console.log(`Movie not found`)
+            }; 
+            //console.log(typeof(data.Response))
             setImage(data.Poster);
             setRating (data.imdbRating);
             setActors (data.Actors);
@@ -27,7 +31,10 @@ export const MovieFetch = ({movieTitle}) => {
         getData();
     }, [movieTitle])
 
+<<<<<<< HEAD
     if (isMovieFound === "True") {
+=======
+>>>>>>> b70abb36fb40100fbc0d0581624edffe2faa5aa4
 
 
     return (
