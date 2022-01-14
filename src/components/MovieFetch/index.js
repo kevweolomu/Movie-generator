@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 export const MovieFetch = ({movieTitle}) => {
-    const [dataMovie, setDataMovie] = useState();
+    //const [dataMovie, setDataMovie] = useState();
     //const [title, setTitle]= useState();
     const [image, setImage]= useState();
     const [rating, setRating] = useState();
@@ -15,7 +15,7 @@ export const MovieFetch = ({movieTitle}) => {
         async function getData(){
             const response = await fetch(`https://www.omdbapi.com/?apikey=3b2a6fcc&t=${movieTitle}`)
             const data = await response.json();
-            setDataMovie(data);
+            // setDataMovie(data);
             setImage(data.Poster);
             setRating (data.imdbRating);
             setActors (data.Actors);
