@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 export const MovieFetch = ({movieTitle}) => {
     //const [dataMovie, setDataMovie] = useState();
-    //const [title, setTitle]= useState();
+    //const [title, setTitle]= useState("");
     const [image, setImage]= useState("");
     const [rating, setRating] = useState("");
     const [actors, setActors] = useState ("");
