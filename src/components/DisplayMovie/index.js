@@ -4,10 +4,10 @@ import Input from '../Input';
 import {Link} from "react-router-dom";
 
 export const DisplayMovie = () => {
-    const [title, setMovieTitle]= useState();
+    const [title, setMovieTitle]= useState("Moana");
 
-    function addTitle(){
-        setMovieTitle(title)
+    function addTitle(titlex){
+        setMovieTitle(titlex)
 
     }
     return (
