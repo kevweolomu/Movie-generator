@@ -3,12 +3,12 @@ import React, {useState, useEffect} from 'react';
 export const MovieFetch = ({movieTitle}) => {
     //const [dataMovie, setDataMovie] = useState();
     //const [title, setTitle]= useState();
-    const [image, setImage]= useState();
-    const [rating, setRating] = useState();
-    const [actors, setActors] = useState ();
-    const [runningTime, setRunningTime] = useState();
-    const [plot, setPlot] = useState ();
-    const [year, setYear] = useState ();
+    const [image, setImage]= useState("");
+    const [rating, setRating] = useState("");
+    const [actors, setActors] = useState ("");
+    const [runningTime, setRunningTime] = useState("");
+    const [plot, setPlot] = useState ("");
+    const [year, setYear] = useState ("");
     
 
     useEffect (()=> {
