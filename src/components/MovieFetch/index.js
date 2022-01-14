@@ -31,11 +31,7 @@ export const MovieFetch = ({movieTitle}) => {
         getData();
     }, [movieTitle])
 
-<<<<<<< HEAD
-    if (isMovieFound === "True") {
-=======
->>>>>>> b70abb36fb40100fbc0d0581624edffe2faa5aa4
-
+    if (isMovieFound === 'True'){
 
     return (
         <div className="movies">

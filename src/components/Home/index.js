@@ -1,10 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-<<<<<<< HEAD
-// import "./images.jpeg";
-=======
 import './home.css';
->>>>>>> b70abb36fb40100fbc0d0581624edffe2faa5aa4
 
 export const Home = () => {
     return (
