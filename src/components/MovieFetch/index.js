@@ -32,8 +32,8 @@ export const MovieFetch = ({movieTitle}) => {
             <img src={image} alt="movie details"/>
             <p>IMDB rating: {rating} </p>
             <p>Actors: {actors}</p>
-            <p> Release time: {year}</p>
-            <p> {runningTime}</p>
+            <p>Release time: {year}</p>
+            <p>{runningTime}</p>
             <p>Plot: {plot}</p>
         </div>
     )
