@@ -9,7 +9,7 @@ export const MovieFetch = ({movieTitle}) => {
     const [runningTime, setRunningTime] = useState("");
     const [plot, setPlot] = useState ("");
     const [year, setYear] = useState ("");
-    
+    const [isMovieFound, setIsMovieFound]= useState("");
 
     useEffect (()=> {
         async function getData(){
@@ -22,9 +22,13 @@ export const MovieFetch = ({movieTitle}) => {
             setPlot (data.Plot);
             setRunningTime (data.Runtime);
             setYear (data.Released);
+            setIsMovieFound(data.Response);
         };
         getData();
     }, [movieTitle])
+
+    if (isMovieFound === "True") {
+
 
     return (
         <div className="movies">
@@ -36,7 +40,11 @@ export const MovieFetch = ({movieTitle}) => {
             <p>{runningTime}</p>
             <p>Plot: {plot}</p>
         </div>
-    )
+    )}
+
+    else {
+       return  <h1>Movie not found </h1>
+    }
 }
 
 export default MovieFetch;
