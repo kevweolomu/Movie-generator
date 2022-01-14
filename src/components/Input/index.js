@@ -4,7 +4,9 @@ export default function Input({onSubmit}) {
     const [title, setTitle] = useState();
     
     function handleChange(event){
-        setTitle(event.target.value)
+        setTitle(event.target.value);
+      
+       
     }
 
     return (
