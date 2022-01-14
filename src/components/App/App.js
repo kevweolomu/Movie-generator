@@ -1,20 +1,23 @@
 import React, {useState} from 'react';
+import { Routes, Route } from "react-router-dom";
 import './App.css';
-import MovieFetch from '../MovieFetch';
-import Input from '../Input';
+import DisplayMovie from '../DisplayMovie';
+import Home from '../Home';
+
 
 function App() {
-  const [title, setMovieTitle]= useState();
-
-  function addTitle(){
-    setMovieTitle(title)
-
-  }
+  
 
   return (
     <div className="App">
-      <MovieFetch movieTitle={title} />
-      <Input onSubmit={addTitle} />
+      <Routes>
+        <Route path="/" element={ <Home/> } />
+        <Route path="findmovie" element={ <DisplayMovie/> } />
+
+      </Routes>
+      
+      
+      {/* <DisplayMovie/> */}
     </div>
   );
 }
