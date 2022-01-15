@@ -1,9 +1,4 @@
 # Movie Generator
 
-For today's hackathon, we will be creating a web experience using data from an api.
+For a hackathon on React, a movie generator have been created. You can search for any morvie you want by simply entering the name of the movie and click the submit button
 
-This is a movie generator 
-
-## UI design
-To see the design behind this app, click the link below
-https://www.figma.com/file/XSZU6h0HPpNdAZEmvE6R5d/Untitled?node-id=0%3A1
